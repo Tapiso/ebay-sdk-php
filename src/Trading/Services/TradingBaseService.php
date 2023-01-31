@@ -2,6 +2,7 @@
 namespace DTS\eBaySDK\Trading\Services;
 
 use DTS\eBaySDK\Trading\Types;
+use Ebay\DigitalSignature\Signature;
 
 /**
  * Base class for the Trading service.
@@ -161,6 +162,13 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
          */
         if ($operationName === 'UploadSiteHostedPictures') {
             $headers['Content-Type'] = 'multipart/form-data;boundary="boundary"';
+        }
+
+        if ($operationName === 'GetAccount') {
+            $isSandbox = false;
+            $signature = new Signature(" example-config.json");
+            $endpoint = $isSandbox ? 'https://api.sandbox.ebay.com/ws/api.dll' : 'https://api.ebay.com/ws/api.dll';
+            $headers = $signature->generateSignatureHeaders($headers, $endpoint, "POST");
         }
 
         return $headers;

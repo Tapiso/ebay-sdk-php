@@ -10,6 +10,8 @@
 
 namespace DTS\eBaySDK\Trading\Services;
 
+use Ebay\DigitalSignature\Signature;
+
 class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
 {
     const API_VERSION = '1057';
@@ -717,12 +719,27 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      * @param \DTS\eBaySDK\Trading\Types\GetAccountRequestType $request
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAccountAsync(\DTS\eBaySDK\Trading\Types\GetAccountRequestType $request)
+    public function getAccountAsync(\DTS\eBaySDK\Trading\Types\GetAccountRequestType $request, $config = [])
     {
+        if (is_array($config)) {
+            $isSandbox = $config['sandbox'] ?? false;
+            $userToken = $config['user_token'] ?? '';
+
+            $signature = new Signature("example-config.json");
+            $endpoint = $isSandbox ? 'https://api.sandbox.ebay.com/ws/api.dll' : 'https://api.ebay.com/ws/api.dll';
+            $headers = [
+                'Authorization' => 'Bearer ' . $userToken,
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json'
+            ];
+            $headers = $signature->generateSignatureHeaders($headers, $endpoint, "POST");
+        }
+
         return $this->callOperationAsync(
             'GetAccount',
             $request,
-            '\DTS\eBaySDK\Trading\Types\GetAccountResponseType'
+            '\DTS\eBaySDK\Trading\Types\GetAccountResponseType',
+            $config
         );
     }
 
