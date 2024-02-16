@@ -29,7 +29,6 @@ namespace DTS\eBaySDK\Finding\Types;
  * @property string $location
  * @property string $country
  * @property \DTS\eBaySDK\Finding\Types\Storefront $storeInfo
- * @property \DTS\eBaySDK\Finding\Types\SellerInfo $sellerInfo
  * @property \DTS\eBaySDK\Finding\Types\ShippingInfo $shippingInfo
  * @property \DTS\eBaySDK\Finding\Types\SellingStatus $sellingStatus
  * @property \DTS\eBaySDK\Finding\Types\ListingInfo $listingInfo
@@ -154,13 +153,7 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storeInfo'
-        ],
-        'sellerInfo' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\SellerInfo',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'sellerInfo'
-        ],
+        ]
         'shippingInfo' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ShippingInfo',
             'repeatable' => false,

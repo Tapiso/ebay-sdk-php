@@ -21,7 +21,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property double $PositiveFeedbackPercent
  * @property boolean $FeedbackPrivate
  * @property \DTS\eBaySDK\MerchantData\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
- * @property boolean $IDVerified
  * @property boolean $eBayGoodStanding
  * @property boolean $NewUser
  * @property \DTS\eBaySDK\MerchantData\Types\AddressType $RegistrationAddress
@@ -52,8 +51,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property boolean $QualifiesForSelling
  * @property string $StaticAlias
  * @property \DTS\eBaySDK\MerchantData\Types\AddressType $ShippingAddress
- * @property string $UserFirstName
- * @property string $UserLastName
  */
 class UserType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -114,12 +111,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackRatingStar'
-        ],
-        'IDVerified' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IDVerified'
         ],
         'eBayGoodStanding' => [
             'type' => 'boolean',
@@ -300,18 +291,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
-        ],
-        'UserFirstName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserFirstName'
-        ],
-        'UserLastName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserLastName'
         ]
     ];
 

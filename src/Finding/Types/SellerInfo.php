@@ -15,7 +15,6 @@ namespace DTS\eBaySDK\Finding\Types;
  * @property string $sellerUserName
  * @property integer $feedbackScore
  * @property double $positiveFeedbackPercent
- * @property string $feedbackRatingStar
  * @property boolean $topRatedSeller
  */
 class SellerInfo extends \DTS\eBaySDK\Types\BaseType
@@ -41,12 +40,6 @@ class SellerInfo extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'positiveFeedbackPercent'
-        ],
-        'feedbackRatingStar' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'feedbackRatingStar'
         ],
         'topRatedSeller' => [
             'type' => 'boolean',

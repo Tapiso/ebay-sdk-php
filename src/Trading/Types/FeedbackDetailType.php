@@ -13,7 +13,6 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $CommentingUser
- * @property \DTS\eBaySDK\Trading\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
  * @property integer $CommentingUserScore
  * @property string $CommentText
  * @property \DateTime $CommentTime
@@ -44,12 +43,6 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CommentingUser'
-        ],
-        'FeedbackRatingStar' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackRatingStar'
         ],
         'CommentingUserScore' => [
             'type' => 'integer',

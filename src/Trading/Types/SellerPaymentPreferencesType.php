@@ -14,7 +14,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property boolean $AlwaysUseThisPaymentAddress
  * @property \DTS\eBaySDK\Trading\Enums\DisplayPayNowButtonCodeType $DisplayPayNowButton
- * @property boolean $PayPalPreferred
  * @property string $DefaultPayPalEmailAddress
  * @property boolean $PayPalAlwaysOn
  * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerPaymentAddress
@@ -39,12 +38,6 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisplayPayNowButton'
-        ],
-        'PayPalPreferred' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalPreferred'
         ],
         'DefaultPayPalEmailAddress' => [
             'type' => 'string',

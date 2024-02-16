@@ -37,7 +37,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Enums\ListingTypeCodeType $ListingType
  * @property string $Location
  * @property integer $LotSize
- * @property \DTS\eBaySDK\MerchantData\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
  * @property string $PayPalEmailAddress
  * @property \DTS\eBaySDK\MerchantData\Types\CategoryType $PrimaryCategory
  * @property boolean $PrivateListing
@@ -112,9 +111,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Types\VariationsType $Variations
  * @property \DTS\eBaySDK\MerchantData\Types\ItemCompatibilityListType $ItemCompatibilityList
  * @property integer $ItemCompatibilityCount
- * @property integer $ConditionID
  * @property string $ConditionDescription
- * @property string $ConditionDisplayName
  * @property string $TaxCategory
  * @property \DTS\eBaySDK\MerchantData\Enums\QuantityAvailableHintCodeType $QuantityAvailableHint
  * @property integer $QuantityThreshold
@@ -306,12 +303,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LotSize'
-        ],
-        'PaymentMethods' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'PaymentMethods'
         ],
         'PayPalEmailAddress' => [
             'type' => 'string',
@@ -757,23 +748,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemCompatibilityCount'
         ],
-        'ConditionID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionID'
-        ],
         'ConditionDescription' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConditionDescription'
-        ],
-        'ConditionDisplayName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionDisplayName'
         ],
         'TaxCategory' => [
             'type' => 'string',

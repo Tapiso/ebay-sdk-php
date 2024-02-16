@@ -12,7 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $AboutMePage
  * @property string $EIASToken
  * @property string $Email
  * @property integer $FeedbackScore
@@ -21,10 +20,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property double $PositiveFeedbackPercent
  * @property boolean $FeedbackPrivate
  * @property \DTS\eBaySDK\Trading\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
- * @property boolean $IDVerified
  * @property boolean $eBayGoodStanding
  * @property boolean $NewUser
- * @property \DTS\eBaySDK\Trading\Types\AddressType $RegistrationAddress
  * @property \DateTime $RegistrationDate
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
  * @property \DTS\eBaySDK\Trading\Enums\UserStatusCodeType $Status
@@ -52,8 +49,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $StaticAlias
  * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
  * @property \DTS\eBaySDK\Trading\Types\MembershipDetailsType $Membership
- * @property string $UserFirstName
- * @property string $UserLastName
  */
 class UserType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -61,12 +56,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'AboutMePage' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AboutMePage'
-        ],
         'EIASToken' => [
             'type' => 'string',
             'repeatable' => false,
@@ -115,12 +104,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeedbackRatingStar'
         ],
-        'IDVerified' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IDVerified'
-        ],
         'eBayGoodStanding' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -132,12 +115,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewUser'
-        ],
-        'RegistrationAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RegistrationAddress'
         ],
         'RegistrationDate' => [
             'type' => 'DateTime',
@@ -300,18 +277,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Membership'
-        ],
-        'UserFirstName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserFirstName'
-        ],
-        'UserLastName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserLastName'
         ]
     ];
 
