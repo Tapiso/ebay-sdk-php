@@ -13,8 +13,6 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $Adult
- * @property boolean $BindingAuction
- * @property boolean $CheckoutEnabled
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedBuyItNowPrice
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedStartPrice
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedReservePrice
@@ -29,7 +27,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $BuyItNowAvailable
  * @property \DTS\eBaySDK\Trading\Types\AmountType $MinimumBestOfferPrice
  * @property string $LocalListingDistance
- * @property string $TCROriginalItemID
  * @property string $ViewItemURLForNaturalSearch
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BestOfferAutoAcceptPrice
  * @property \DTS\eBaySDK\Trading\Enums\EndReasonCodeType $EndingReason
@@ -45,18 +42,6 @@ class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Adult'
-        ],
-        'BindingAuction' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BindingAuction'
-        ],
-        'CheckoutEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CheckoutEnabled'
         ],
         'ConvertedBuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -141,12 +126,6 @@ class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LocalListingDistance'
-        ],
-        'TCROriginalItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TCROriginalItemID'
         ],
         'ViewItemURLForNaturalSearch' => [
             'type' => 'string',

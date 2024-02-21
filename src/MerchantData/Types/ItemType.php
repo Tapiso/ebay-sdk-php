@@ -107,7 +107,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Types\ReturnPolicyType $ReturnPolicy
  * @property \DTS\eBaySDK\MerchantData\Enums\SiteCodeType[] $PaymentAllowedSite
  * @property \DTS\eBaySDK\MerchantData\Enums\InventoryTrackingMethodCodeType $InventoryTrackingMethod
- * @property boolean $IntegratedMerchantCreditCardEnabled
  * @property \DTS\eBaySDK\MerchantData\Types\VariationsType $Variations
  * @property \DTS\eBaySDK\MerchantData\Types\ItemCompatibilityListType $ItemCompatibilityList
  * @property integer $ItemCompatibilityCount
@@ -723,12 +722,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InventoryTrackingMethod'
-        ],
-        'IntegratedMerchantCreditCardEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
         ],
         'Variations' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\VariationsType',

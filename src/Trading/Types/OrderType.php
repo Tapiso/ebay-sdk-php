@@ -32,11 +32,9 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $BuyerUserID
  * @property \DateTime $PaidTime
  * @property \DateTime $ShippedTime
- * @property boolean $IntegratedMerchantCreditCardEnabled
  * @property string $BuyerCheckoutMessage
  * @property string $EIASToken
  * @property \DTS\eBaySDK\Trading\Enums\PaymentHoldStatusCodeType $PaymentHoldStatus
- * @property \DTS\eBaySDK\Trading\Types\PaymentHoldDetailType $PaymentHoldDetails
  * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
  * @property string $RefundStatus
  * @property boolean $IsMultiLegShipping
@@ -183,12 +181,6 @@ class OrderType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippedTime'
         ],
-        'IntegratedMerchantCreditCardEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ],
         'BuyerCheckoutMessage' => [
             'type' => 'string',
             'repeatable' => false,
@@ -206,12 +198,6 @@ class OrderType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldStatus'
-        ],
-        'PaymentHoldDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaymentHoldDetailType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentHoldDetails'
         ],
         'RefundAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',

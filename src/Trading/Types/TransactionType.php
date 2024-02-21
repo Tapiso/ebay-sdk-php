@@ -67,7 +67,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\PickupMethodSelectedType $PickupMethodSelected
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingConvenienceCharge
  * @property string $LogisticsPlanType
- * @property \DTS\eBaySDK\Trading\Types\BuyerPackageEnclosuresType $BuyerPackageEnclosures
  * @property string $InventoryReservationID
  * @property string $ExtendedOrderID
  * @property boolean $eBayPlusTransaction
@@ -412,12 +411,6 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LogisticsPlanType'
-        ],
-        'BuyerPackageEnclosures' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerPackageEnclosuresType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerPackageEnclosures'
         ],
         'InventoryReservationID' => [
             'type' => 'string',
